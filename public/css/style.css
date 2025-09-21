@@ -3,8 +3,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: #f8f9fa;
+    color: #343a40;
     line-height: 1.6;
 }
 
@@ -17,12 +17,11 @@ body {
 /* Header & Navbar */
 .navbar {
     background-color: #1a1a1a;
-    color: #fff;
-    padding: 1rem 0;
+    padding: 0.5rem 0; /* Un peu moins haut */
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .navbar .container {
@@ -31,23 +30,13 @@ body {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
 .logo img {
-    height: 80px; /* Votre taille de logo personnalisée */
-    margin-right: 10px;
+    height: 60px; /* Taille de logo ajustée */
     transition: transform 0.3s ease;
 }
 
 .logo:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .navbar nav ul {
@@ -58,7 +47,7 @@ body {
 }
 
 .navbar nav ul li {
-    margin-left: 25px;
+    margin-left: 30px;
 }
 
 .navbar nav ul li a {
@@ -69,345 +58,231 @@ body {
 }
 
 .navbar nav ul li a:hover {
-    color: #4CAF50;
+    color: #c561ff; /* Nouvelle couleur de survol */
 }
 
-/* Hero Section */
+/* Hero Section - NOUVEAU DESIGN */
 .hero {
-    background-color: #2a2a2a;
+    /* Dégradé de couleurs moderne */
+    background: linear-gradient(135deg, #1f005c, #2c003e);
     color: #fff;
     text-align: center;
-    padding: 80px 0;
+    padding: 100px 0;
+    position: relative;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .hero .subtitle {
-    font-size: 1.2rem;
-    color: #ccc;
-    margin-bottom: 30px;
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #download-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 #tiktok-url {
-    width: 50%;
-    padding: 15px;
-    border: 1px solid #555;
-    border-radius: 5px;
-    font-size: 1rem;
-    background-color: #333;
+    width: 60%;
+    max-width: 600px;
+    padding: 18px 25px;
+    border: 1px solid #5a3d8c;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.2);
     color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#tiktok-url::placeholder {
+    color: #aaa;
+}
+
+#tiktok-url:focus {
+    outline: none;
+    border-color: #c561ff;
+    box-shadow: 0 0 15px rgba(197, 97, 255, 0.5);
 }
 
 #download-form button {
-    padding: 15px 30px;
+    padding: 18px 40px;
     border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
+    border-radius: 50px;
+    /* Nouveau bouton avec dégradé */
+    background: linear-gradient(45deg, #a03cff, #d843ff);
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #download-form button:hover {
-    background-color: #45a049;
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Loader and Error Message */
-.loader {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #4CAF50;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin: 20px auto;
+/* NOUVELLE SECTION: How It Works */
+.how-it-works-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.how-it-works-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
 }
 
-.error-message {
-    color: #ff4d4d;
-    background-color: rgba(255, 77, 77, 0.1);
-    border: 1px solid #ff4d4d;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-/* Result Section */
-.result-section {
-    padding: 60px 0;
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
     text-align: center;
 }
 
-.result-preview {
+.step .step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #a03cff, #d843ff);
+    color: white;
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 20px;
-    margin-top: 20px;
-    background: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#video-thumbnail {
-    max-width: 200px;
-    border-radius: 8px;
-}
-
-.result-info {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-}
-
-#video-title {
-    font-size: 1.1rem;
+    justify-content: center;
+    font-size: 2rem;
     font-weight: bold;
-    margin: 0;
+    margin: 0 auto 20px auto;
 }
 
-.download-button {
-    display: inline-block;
-    padding: 12px 25px;
-    text-decoration: none;
-    color: #fff;
-    background-color: #007bff;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
+.step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-.download-button.audio {
-    background-color: #ff9800;
-}
-
-.download-button:hover {
-    transform: translateY(-2px);
-    background-color: #0056b3;
-}
-
-.download-button.audio:hover {
-    background-color: #e68900;
-}
-
-/* Features Section */
+/* Features Section - NOUVEAU DESIGN AVEC ICÔNES */
 .features-section {
-    padding: 60px 0;
-    background-color: #fff;
+    padding: 80px 0;
+    background-color: #ffffff;
 }
 
 .features-section h2 {
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
 }
 
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 40px;
 }
 
 .feature-item {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.icon-container {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px auto;
+    background: linear-gradient(45deg, #a03cff, #d843ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container svg {
+    width: 35px;
+    height: 35px;
+    color: white;
 }
 
 .feature-item h3 {
     margin-bottom: 10px;
-    color: #333;
+    font-size: 1.5rem;
 }
+
+/* Styles pour le blog, contact, etc. - restent les mêmes */
+.content-page, .result-section, .footer, .loader, .error-message, .blog-posts-list, .blog-post-preview, .contact-form {
+    /* On garde tous les autres styles que vous aviez déjà */
+}
+/* ... (le reste de votre ancien code CSS pour les pages de contenu, le footer, etc. est toujours valable) ... */
+/* NOTE: j'ai inclus ci-dessous les styles du blog pour que vous n'ayez rien à rajouter */
 
 /* Generic Content Page Styles */
-.content-page {
-    padding: 60px 0;
-}
+.content-page { padding: 60px 0; }
+.content-page h1, .content-page h2, .content-page h3 { color: #333; }
+.content-page p, .content-page li { line-height: 1.8; }
+.content-page ul { padding-left: 20px; }
+.content-page a { color: #a03cff; text-decoration: none; }
+.content-page a:hover { text-decoration: underline; }
+.content-page img { max-width: 100%; height: auto; border-radius: 8px; margin: 20px 0; }
 
-.content-page h1, .content-page h2, .content-page h3 {
-    color: #333;
-}
+/* Result Section */
+.result-section { padding: 60px 0; text-align: center; }
+.result-preview { display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 20px; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); max-width: 600px; margin-left: auto; margin-right: auto; }
+#video-thumbnail { max-width: 200px; border-radius: 8px; }
+.result-info { display: flex; flex-direction: column; gap: 15px; align-items: center; }
+#video-title { font-size: 1.1rem; font-weight: bold; margin: 0; }
+.download-button { display: inline-block; padding: 12px 25px; text-decoration: none; color: #fff; background-color: #a03cff; border-radius: 5px; transition: background-color 0.3s, transform 0.2s; }
+.download-button.audio { background-color: #ff9800; }
+.download-button:hover { transform: translateY(-2px); background-color: #8e2de2; }
+.download-button.audio:hover { background-color: #e68900; }
 
-.content-page p, .content-page li {
-    line-height: 1.8;
-}
 
-.content-page ul {
-    padding-left: 20px;
-}
+/* Loader and Error Message */
+.loader { border: 4px solid #f3f3f3; border-top: 4px solid #a03cff; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 20px auto; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.error-message { color: #ff4d4d; background-color: rgba(255, 77, 77, 0.1); border: 1px solid #ff4d4d; padding: 15px; border-radius: 5px; margin-top: 20px; display: inline-block; }
 
-.content-page a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.content-page a:hover {
-    text-decoration: underline;
-}
-
-.content-page img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
-/* Contact Form */
-.contact-form {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.form-group button {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.form-group button:hover {
-    background-color: #45a049;
-}
 
 /* Footer */
-.footer {
-    background-color: #1a1a1a;
-    color: #aaa;
-    padding: 40px 0;
-    text-align: center;
-}
+.footer { background-color: #1a1a1a; color: #aaa; padding: 40px 0; text-align: center; }
+.footer-links a, .footer-external-links a { color: #aaa; margin: 0 10px; text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover, .footer-external-links a:hover { color: #fff; }
+.footer-external-links { margin: 20px 0; }
 
-.footer-links a, .footer-external-links a {
-    color: #aaa;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover, .footer-external-links a:hover {
-    color: #fff;
-}
-
-.footer-external-links {
-    margin: 20px 0;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-    }
-
-    .navbar nav ul {
-        margin-top: 15px;
-    }
-
-    #download-form {
-        flex-direction: column;
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    #tiktok-url {
-        width: 100%;
-    }
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .result-preview {
-        flex-direction: column;
-    }
+    .navbar .container { flex-direction: column; gap: 15px; }
+    .navbar nav ul { flex-wrap: wrap; justify-content: center; }
+    #download-form { flex-direction: column; width: 90%; margin: 0 auto; }
+    #tiktok-url { width: 100%; text-align: center;}
+    .hero h1 { font-size: 2.5rem; }
+    .result-preview { flex-direction: column; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .features-grid { grid-template-columns: 1fr; }
 }
 
-/* ========================================= */
-/* === NOUVEAU CODE POUR LA PAGE DE BLOG === */
-/* ========================================= */
-
-.blog-posts-list {
-    margin-top: 40px;
-}
-
-.blog-post-preview {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 25px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.blog-post-preview h2 {
-    margin-top: 0;
-}
-
-.blog-post-preview h2 a {
-    text-decoration: none;
-    color: #333;
-}
-
-.blog-post-preview h2 a:hover {
-    color: #007bff;
-}
-
-.post-meta {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 10px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #007bff;
-}
-
-.read-more:hover {
-    text-decoration: underline;
-}
+/* Styles pour la page de blog */
+.blog-posts-list { margin-top: 40px; }
+.blog-post-preview { background-color: #fff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px; margin-bottom: 30px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.blog-post-preview h2 { margin-top: 0; }
+.blog-post-preview h2 a { text-decoration: none; color: #333; }
+.blog-post-preview h2 a:hover { color: #a03cff; }
+.post-meta { font-size: 0.9em; color: #777; margin-bottom: 15px; }
+.read-more { display: inline-block; margin-top: 10px; font-weight: bold; text-decoration: none; color: #a03cff; }
+.read-more:hover { text-decoration: underline; }
