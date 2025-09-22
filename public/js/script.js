@@ -19,22 +19,31 @@ document.addEventListener('DOMContentLoaded', () => {
         resultSection.style.display = 'none';
         loader.style.display = 'block';
 
+        // --- START: MODIFIED CODE BLOCK ---
         try {
             const response = await fetch(`/api/download?url=${encodeURIComponent(videoUrl)}`);
-            const data = await response.json();
-
+            
+            // Hide the loader as soon as we get a response
             loader.style.display = 'none';
 
+            // If the response is OK (status 200-299), it's a success, so parse it as JSON
             if (response.ok) {
+                const data = await response.json();
                 displayResult(data);
             } else {
-                showError(data.error || 'An unknown error occurred.');
+                // If the response is an error (like our 503 maintenance error)
+                // Read the response as plain text to get the error message
+                const errorText = await response.text();
+                showError(errorText || 'An unknown server error occurred.');
             }
+
         } catch (error) {
+            // This will catch network errors (e.g., user is offline or server is down)
             loader.style.display = 'none';
             showError('Failed to connect to the server. Please check your connection and try again.');
             console.error('Fetch error:', error);
         }
+        // --- END: MODIFIED CODE BLOCK ---
     });
 
     function displayResult(data) {
@@ -51,8 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         resultSection.style.display = 'block';
     }
-
-
 
     function showError(message) {
         errorMessage.textContent = message;
