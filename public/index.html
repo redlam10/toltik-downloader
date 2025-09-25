@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tik - Free TikTok Video Downloader Without Watermark</title>
+    <meta name="description" content="Tik is the best free TikTok video downloader. Download any TikTok video quickly and without a watermark. Just paste the URL and get your MP4 video or MP3 audio in seconds.">
+    <meta name="keywords" content="tiktok video downloader, download tiktok video, tiktok downloader, no watermark, free tiktok downloader">
     
-    <!-- PROBLEM 1: Title is not optimized. -->
-    <!-- FIX: Lead with your main keyword. This is the most important change. -->
-    <title>Free TikTok Download - TikTok Video Downloader Without Watermark</title>
-    
-    <!-- PROBLEM 2: Meta Description is not focused enough. -->
-    <!-- FIX: Make it a compelling ad for your service, using your main keywords. -->
-    <meta name="description" content="Use the best free TikTok video downloader to get any TikTok video without a watermark. Our tool lets you download unlimited TikTok videos in MP4 or MP3 format. Fast and easy.">
-    
-    <!-- PROBLEM 3: The 'keywords' meta tag is ignored by Google. It does no harm, but also no good. -->
-    <!-- FIX: It has been removed to clean up the code. Focus should be on content. -->
-    
-    <meta property="og:title" content="Toltik - Free TikTok Video Downloader">
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Tik - Free TikTok Video Downloader">
     <meta property="og:description" content="The fastest and easiest way to download TikTok videos without watermarks for free.">
     <meta property="og:image" content="/images/logo.png">
-    <meta property="og:url" content="https://www.toltik.com">
+    <meta property="og:url" content="http://localhost:3000">
     <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="/css/style.css">
@@ -29,14 +22,8 @@
     <header class="navbar">
         <div class="container">
             <a href="/" class="logo">
-              <picture>
-                <source srcset="/images/logo.webp" type="image/webp">
-                <!-- Minor FIX: Make the alt text more descriptive for search engines. -->
-                <img src="/images/logo.png" alt="Toltik Free TikTok Downloader" width="150" height="50">
-              </picture>
-            </a>
-
-            <!-- NO CHANGES to your navigation links -->
+    <img src="/images/logo.png" alt="Tik Logo - Download Symbol">
+</a>
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
@@ -44,7 +31,6 @@
                     <li><a href="/faq.html">FAQ</a></li>
                     <li><a href="/blog.html">Blog</a></li>
                     <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="/terms.html">Terms of Service</a></li>
                 </ul>
             </nav>
         </div>
@@ -53,12 +39,10 @@
     <main>
         <section class="hero">
             <div class="container">
-                <!-- PROBLEM 4: Your H1 heading is good, but can be more direct. -->
-                <!-- FIX: Make the H1 the exact keyword you want to rank for. -->
-                <h1>Free TikTok Download</h1>
-                <p class="subtitle">Paste a TikTok link to download any video quickly, for free, and without a watermark.</p>
+                <h1>The Ultimate TikTok Video Downloader</h1>
+                <p class="subtitle">Download any TikTok video without a watermark, for free. Fast, simple, and reliable.</p>
                 <form id="download-form">
-                    <input type="text" id="tiktok-url" placeholder="Paste your TikTok video URL here..." required>
+                    <input type="text" id="tiktok-url" placeholder="Paste TikTok video URL here..." required>
                     <button type="submit">Download</button>
                 </form>
                 <div id="loader" class="loader" style="display: none;"></div>
@@ -67,28 +51,14 @@
         </section>
 
         <section id="result-section" class="result-section" style="display: none;">
-            <!-- This section is functional, no changes needed -->
-        </section>
-
-        <section class="how-it-works-section">
             <div class="container">
-                <!-- FIX: Optimize H2 to support the main keyword with a related phrase. -->
-                <h2>How to Download a TikTok Video</h2>
-                <div class="steps-grid">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Copy TikTok Link</h3>
-                        <p>Find the TikTok video you want and copy its "Share" link.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Paste The Link</h3>
-                        <p>Paste the video URL into our TikTok downloader on this homepage.</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Download Video</h3>
-                        <p>Click the download button for your free TikTok video without a watermark.</p>
+                <h2>Your Download is Ready!</h2>
+                <div class="result-preview">
+                    <img id="video-thumbnail" src="" alt="Video Thumbnail">
+                    <div class="result-info">
+                        <p id="video-title">Video Title Here</p>
+                        <a id="download-video" class="download-button" href="#" download>Download Video (MP4)</a>
+                        <a id="download-audio" class="download-button audio" href="#" download>Download Audio (MP3)</a>
                     </div>
                 </div>
             </div>
@@ -96,60 +66,41 @@
         
         <section class="features-section">
             <div class="container">
-                <!-- FIX: Change the H2 from a brand question ("Why Choose Toltik?") to a keyword-focused benefit. -->
-                <h2>Benefits of Our TikTok Downloader</h2>
+                <h2>Why Choose Tik?</h2>
                 <div class="features-grid">
                     <div class="feature-item">
-                        <div class="icon-container">
-                           <!-- SVG code -->
-                        </div>
                         <h3>No Watermark</h3>
-                        <!-- FIX: Weave in a keyword naturally in the text. -->
-                        <p>Download your favorite TikTok videos in high-quality form. Every <strong>free TikTok download</strong> is clean.</p>
+                        <p>Download your favorite TikTok videos in their original, high-quality form without any distracting watermarks.</p>
                     </div>
                     <div class="feature-item">
-                        <div class="icon-container">
-                             <!-- SVG code -->
-                        </div>
                         <h3>Completely Free</h3>
-                        <p>Our service is 100% free to use. There are no hidden fees, subscriptions, or limits on your downloads.</p>
+                        <p>Our service is 100% free to use. No hidden fees, no subscriptions, and no limits on downloads.</p>
                     </div>
                     <div class="feature-item">
-                         <div class="icon-container">
-                           <!-- SVG code -->
-                        </div>
                         <h3>Fast & Easy</h3>
                         <p>Just paste the TikTok video link and click download. Your video is ready in just a few seconds.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="disclaimer-section">
-            <!-- No changes needed here -->
-        </section>
-
     </main>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-seo-text" style="padding: 0 20px 30px 20px; color: #ccc;">
-                <!-- FIX: Make the footer text more direct and keyword-focused. -->
-                <p>Use this free TikTok video downloader tool to save TikToks without watermark in MP4 or MP3 format. Safe, fast, and easy to use for all your TikTok download needs.</p>
+            <div class="footer-links">
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/contact.html">Contact Us</a>
+                <a href="/seo-content.html">TikTok Downloader Guide</a>
             </div>
-
-           <!-- NO CHANGES to your footer links -->
-           <div class="footer-links" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin:20px 0;">
-                <a href="/privacy.html" style="font-size:16px; padding:10px 15px; display:inline-block;">Privacy Policy</a>
-                <a href="/contact.html" style="font-size:16px; padding:10px 15px; display:inline-block;">Contact Us</a>
-                <a href="/seo-content.html" style="font-size:16px; padding:10px 15px; display:inline-block;">TikTok Downloader Guide</a>
-                <a href="/terms.html" style="font-size:16px; padding:10px 15px; display:inline-block;">Terms of Service</a>
+            <div class="footer-external-links">
+                <p>Learn more about web technologies:</p>
+                <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">W3Schools</a>
+                <a href="https://developer.mozilla.org" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
             </div>
-
-            <p>&copy; 2025 Toltik. All rights reserved. We are not affiliated with TikTok.</p>
+            <p>&copy; 2025 Tik. All rights reserved. We are not affiliated with TikTok.</p>
         </div>
     </footer>
 
-    <script src="/js/script.js"></script> 
+    <script src="/js/script.js"></script>
 </body>
 </html>
